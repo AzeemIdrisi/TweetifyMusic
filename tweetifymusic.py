@@ -12,7 +12,7 @@ sp = spotipy.Spotify(
         scope="user-read-recently-played",
         client_id=spotify_client_id,
         client_secret=spotify_client_secret,
-        redirect_uri="http://localhost:8080",
+        redirect_uri="http://app:8080",
     )
 )
 
