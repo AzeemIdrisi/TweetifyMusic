@@ -10,7 +10,7 @@ TweetifyMusic is a Twitter Bot that automatically tweets your recently played so
 
 - **Twitter and Spotify API integration:** TweetifyMusic uses the Twitter API to post tweets and the Spotify API to fetch your recently played songs. The integration allows for seamless communication between the two platforms.
 
-## Getting Started
+## Getting Started (Tutorial is to be completed)
 
 ### Prerequisites
 
@@ -49,16 +49,18 @@ To run TweetifyMusic locally, you'll need the following:
 
    - To keep the API credentials private, export the credentials as environment variables in your system.
    - Add all your keys in your .zshrc/.bashrc by adding these lines at the last. (Note : Do not use quotes with keys, Replace Xs with the actual keys)
-     `
-export SPOTIFY_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-export SPOTIFY_CLIENT_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXX
-export TWITTER_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-export TWITTER_API_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-export TWITTER_BEARER_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXX
-export TWITTER_ACCESS_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-export TWITTER_ACCESS_TOKEN_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-export SPOTIFY_REFRESH_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-     `
+     
+    ```
+   export SPOTIFY_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   export SPOTIFY_CLIENT_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXX
+   export TWITTER_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   export TWITTER_API_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   export TWITTER_BEARER_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXX
+   export TWITTER_ACCESS_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   export TWITTER_ACCESS_TOKEN_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+   export SPOTIFY_REFRESH_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     ```
+    
    - Replace the placeholder values with your actual API credentials.
 
 6. Run the bot:
