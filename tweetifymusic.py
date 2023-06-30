@@ -4,18 +4,25 @@ from spotipy.oauth2 import SpotifyOAuth
 
 # Spotify Part :
 
-spotify_client_id = os.environ["SPOTIFY_CLIENT_ID"]
-spotify_client_secret = os.environ["SPOTIFY_CLIENT_SECRET"]
+from spotipy.oauth2 import SpotifyOAuth
+client_id = os.environ["SPOTIFY_CLIENT_ID"]
+client_secret = os.environ["SPOTIFY_CLIENT_SECRET"]
+refresh_token = os.environ["SPOTIFY_REFRESH_TOKEN"]
 
-sp = spotipy.Spotify(
-    auth_manager=SpotifyOAuth(
-        scope="user-read-recently-played",
-        client_id=spotify_client_id,
-        client_secret=spotify_client_secret,
-        redirect_uri="http://127.0.0.1:8080/callback",
-    )
-)
 
+# Spotify Part :
+sp_oauth = SpotifyOAuth(client_id=client_id,
+                        client_secret=client_secret,
+                        redirect_uri="http://127.0.0.1:8080/callback",
+                        scope='your-scope',
+                        cache_path='token.txt')  # Path to store the token
+
+# Use the refresh token to get a new access token
+token_info = sp_oauth.refresh_access_token(refresh_token)
+access_token = token_info['access_token']
+
+# Create a Spotipy client with the access token
+sp = spotipy.Spotify(auth=access_token)
 data = sp.current_user_recently_played(limit=1)
 link = data["items"][0]["track"]["external_urls"]["spotify"]
 name = data["items"][0]["track"]["name"]
