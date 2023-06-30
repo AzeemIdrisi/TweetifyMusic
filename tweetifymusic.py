@@ -14,7 +14,7 @@ refresh_token = os.environ["SPOTIFY_REFRESH_TOKEN"]
 sp_oauth = SpotifyOAuth(client_id=client_id,
                         client_secret=client_secret,
                         redirect_uri="http://127.0.0.1:8080/callback",
-                        scope='your-scope',
+                        scope="user-read-recently-played",
                         cache_path='token.txt')  # Path to store the token
 
 # Use the refresh token to get a new access token
