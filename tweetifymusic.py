@@ -1,20 +1,14 @@
 import os
 import spotipy, tweepy
-from spotipy.oauth2 import SpotifyOAuth
+from spotipy.oauth2 import SpotifyClientCredentials
 
 # Spotify Part :
 
 spotify_client_id = os.environ["SPOTIFY_CLIENT_ID"]
 spotify_client_secret = os.environ["SPOTIFY_CLIENT_SECRET"]
 
-sp = spotipy.Spotify(
-    auth_manager=SpotifyOAuth(
-        scope="user-read-recently-played",
-        client_id=spotify_client_id,
-        client_secret=spotify_client_secret,
-        redirect_uri="http://localhost/",
-    )
-)
+auth_manager = SpotifyClientCredentials(spotify_client_id, spotify_client_secret)
+sp = spotipy.Spotify(auth_manager=auth_manager)
 
 data = sp.current_user_recently_played(limit=1)
 link = data["items"][0]["track"]["external_urls"]["spotify"]
