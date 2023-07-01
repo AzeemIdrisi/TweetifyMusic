@@ -1,6 +1,6 @@
 # TweetifyMusic
 
-TweetifyMusic is a Twitter Bot that automatically tweets your recently played song on Spotify on a manually scheduled basis using GitHub Actions. It leverages the Twitter and Spotify APIs to fetch the latest played song from Spotify and post it on your Twitter account.
+TweetifyMusic is a Twitter Bot that automatically tweets your recently played song on Spotify on a manually scheduled basis using **GitHub Actions**. It leverages the Twitter and Spotify APIs to fetch the latest played song from Spotify and post it on your Twitter account.
 
 ## Features
 
@@ -16,9 +16,10 @@ TweetifyMusic is a Twitter Bot that automatically tweets your recently played so
 
 To run TweetifyMusic locally, you'll need the following:
 
-- Python 3 installed on your machine
-- Twitter API credentials (API key, API secret key, Access token, Access token secret)
-- Spotify API credentials (Client ID, Client Secret)
+- **Python3** installed on your machine
+- Python libraries : `spotipy` and `tweepy`
+- **Twitter API** credentials (API key, API secret key, Access token, Access token secret)
+- **Spotify API** credentials (Client ID, Client Secret)
 
 ### Installation
 

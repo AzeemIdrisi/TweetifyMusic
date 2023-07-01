@@ -1,31 +1,32 @@
 import os
-import spotipy, tweepy
+import tweepy
+import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 # Spotify Part :
 
-from spotipy.oauth2 import SpotifyOAuth
 client_id = os.environ["SPOTIFY_CLIENT_ID"]
 client_secret = os.environ["SPOTIFY_CLIENT_SECRET"]
 refresh_token = os.environ["SPOTIFY_REFRESH_TOKEN"]
 
 
-# Spotify Part :
-sp_oauth = SpotifyOAuth(client_id=client_id,
-                        client_secret=client_secret,
-                        redirect_uri="http://127.0.0.1:8080/callback",
-                        scope="user-read-recently-played",
-                        cache_path='token.txt')  # Path to store the token
+sp_oauth = SpotifyOAuth(
+    client_id=client_id,
+    client_secret=client_secret,
+    redirect_uri="http://127.0.0.1:8080/callback",
+    scope="user-read-recently-played",
+    cache_path="token.txt",  # Path to store the token
+)
 
 # Use the refresh token to get a new access token
 token_info = sp_oauth.refresh_access_token(refresh_token)
-access_token = token_info['access_token']
+access_token = token_info["access_token"]
 
 # Create a Spotipy client with the access token
 sp = spotipy.Spotify(auth=access_token)
 data = sp.current_user_recently_played(limit=1)
-link = data["items"][0]["track"]["external_urls"]["spotify"]
-name = data["items"][0]["track"]["name"]
+song_url = data["items"][0]["track"]["external_urls"]["spotify"]
+song_name = data["items"][0]["track"]["name"]
 
 # Twitter Part :
 twitter_api_key = os.environ["TWITTER_API_KEY"]
@@ -51,5 +52,10 @@ auth = tweepy.OAuth1UserHandler(
 
 api = tweepy.API(auth)
 
-
-user.create_tweet(text=f"Song : {name}\n\n TweetifyMusic Bot by AzeemIdrisi {link}")
+try:
+    user.create_tweet(
+        text=f"Song : {song_name}\n\n TweetifyMusic Bot by AzeemIdrisi {song_url}"
+    )
+    print("Tweet Complete.")
+except tweepy.Forbidden:
+    print("Skipping Duplicate Tweet.")
