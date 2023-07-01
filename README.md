@@ -1,7 +1,6 @@
 # TweetifyMusic
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/AzeemIdrisi/TweetifyMusic/main.yml?logo=github)
-
 ![Static Badge](https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white)
 
 
