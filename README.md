@@ -1,11 +1,12 @@
 # TweetifyMusic
+### GitHub Actions based Twitter Bot
 
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/AzeemIdrisi/TweetifyMusic/main.yml?logo=github)
 ![Static Badge](https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white)
 
 
 
-TweetifyMusic is a Twitter bot that automatically tweets your recently played song on Spotify on a manually scheduled basis using **GitHub Actions**. It leverages the Twitter and Spotify APIs to fetch the latest played song from Spotify and post it on your Twitter account.
+TweetifyMusic is a Twitter bot that automatically tweets your recently played song on **Spotify** on a manually scheduled basis using **GitHub Actions**. It leverages the Twitter and Spotify APIs to fetch the latest played song from Spotify and post it on your Twitter account.
 
 ## Features
 
