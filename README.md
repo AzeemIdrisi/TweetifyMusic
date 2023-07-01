@@ -79,9 +79,7 @@ To run TweetifyMusic locally, you'll need the following:
          - Add all your keys in your .zshrc/.bashrc by adding these lines at the end. (**Note**: Do not use double quotes with keys)
            
           ```
-         export
-
- SPOTIFY_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+         export SPOTIFY_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
          export SPOTIFY_CLIENT_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXX
          export TWITTER_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
          export TWITTER_API_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
