@@ -4,9 +4,9 @@
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/AzeemIdrisi/TweetifyMusic/main.yml?logo=github)
 ![Static Badge](https://img.shields.io/badge/python-3.11-blue?logo=python&logoColor=white)
 
-
-
 TweetifyMusic is a Twitter bot that automatically tweets your recently played song on **Spotify** on a manually scheduled basis using **GitHub Actions**. It leverages the Twitter and Spotify APIs to fetch the latest played song from Spotify and post it on your Twitter account.
+
+<img src="https://github.com/AzeemIdrisi/TweetifyMusic/assets/112647789/7468db91-4eda-47d6-9d05-d632a560be5b" height=448 width=608 >
 
 ## Features
 
@@ -15,6 +15,9 @@ TweetifyMusic is a Twitter bot that automatically tweets your recently played so
 - **Manual scheduling:** You have full control over when the tweets are posted. You can manually schedule the tweets according to your preference using GitHub Actions.
 
 - **Twitter and Spotify API integration:** TweetifyMusic uses the Twitter API to post tweets and the Spotify API to fetch your recently played songs. The integration allows for seamless communication between the two platforms.
+
+
+
 
 ## Getting Started
 
@@ -126,6 +129,9 @@ Now add all your API credentials one by one with the following names:
 | TWITTER_API_SECRET  | Paste your API credential here without quotes |
 | TWITTER_BEARER_TOKEN  | Paste your API credential here without quotes |
 
+Your repository secrets should look like this screenshot -
+![image](https://github.com/AzeemIdrisi/TweetifyMusic/assets/112647789/35a832d2-2249-4ae9-b39d-2ebbfcdea81d)
+
 This will save your API credentials which are only visible to you.
 
 - The default workflow will run once every 24 hours. To change it, edit the **TweetifyMusic/.github/workflows/main.yml** and edit `- cron: '0 */24 * * *'`.
@@ -138,7 +144,7 @@ Contributions are welcome! If you have any ideas, suggestions, or bug reports, p
 
 ## License
 
-This project is licensed under the * License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-3.0 License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
