@@ -53,7 +53,7 @@ auth = tweepy.OAuth1UserHandler(
 api = tweepy.API(auth)
 
 try:
-    user.create_tweet(text=f"Song : {song_name}\n\n TweetifyMusic {song_url}")
+    user.create_tweet(text=f"Song : {song_name}\n\n Tweeted by TweetifyMusic. {song_url}")
     print("Tweet Completed.")
 except tweepy.Forbidden:
     print("Skipping Duplicate Tweet.")
